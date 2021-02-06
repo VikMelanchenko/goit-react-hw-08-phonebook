@@ -1,0 +1,64 @@
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1 {
+  font-size: 20px;
+  color: #3e403f;
+  text-align: center;
+}
+
+label {
+  font-size: 15px;
+  color: #3e403f;
+}
+
+.form {
+  width: 500px;
+  min-height: 200px;
+  height: auto;
+  margin: 2% auto;
+  padding: 2%;
+}
+
+.input__item {
+  background: #fff;
+  color: #333;
+  padding: 14.5px 0px 15px 9px;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+  border: none;
+
+  border-radius: 5px 5px 5px 5px;
+  transition: 0.2s linear;
+}
+
+.form__button {
+  display: block;
+  color: #252537;
+
+  width: 500px;
+  padding: 14.5px 0px 15px 9px;
+
+  background: #fff;
+  border-radius: 5px;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+  }
+}
