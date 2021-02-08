@@ -1,0 +1,51 @@
+@import '../../sass/utilities/mixins';
+@import '../../sass/utilities/placeholder';
+@import '../../sass/utilities/vars';
+
+.form__container {
+  @include centeredFlex();
+
+  .form {
+    @extend %form;
+  }
+
+  .head__form {
+    margin: 2% auto 10% auto;
+    text-align: center;
+
+    &h2 {
+      @extend %h2;
+    }
+
+    &p {
+      letter-spacing: $letter-spacing-normal;
+    }
+  }
+  label {
+    @extend %label;
+    .input__item {
+      @extend %input;
+    }
+  }
+}
+
+.main_button {
+  display: block;
+  color: $input-color;
+
+  width: 450px;
+
+  padding: $padding-form-input;
+  background: $primary-white-color;
+  border-radius: $border-form-input;
+  cursor: pointer;
+
+  @extend %styles;
+
+  margin: 7% auto;
+  letter-spacing: $letter-spacing-normal;
+
+  &:hover {
+    @extend %hover;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../sass/utilities/container';
+@import '../../sass/utilities/vars';
+@import '../../sass/utilities/placeholder';
+
+.Container {
+  h1 {
+    @extend %h1;
+  }
+}
+
+.form {
+  width: 500px;
+  min-height: 100px;
+  margin: 2% auto;
+  padding: 2%;
+
+  label {
+    @extend %label;
+
+    .input__item {
+      @extend %input;
+    }
+  }
+}
+
+.form__button {
+  display: block;
+  color: $primery-link-color;
+
+  width: 500px;
+  padding: $padding-form-input;
+
+  background: $primary-white-color;
+  border-radius: $border-form-input;
+
+  @extend %styles;
+
+  letter-spacing: 0.05em;
+  margin: 7% auto;
+  cursor: pointer;
+
+  &:hover {
+    @extend %hover;
+  }
+}

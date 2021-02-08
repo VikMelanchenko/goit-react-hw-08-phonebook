@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useDispatch, useSelector } from 'react-redux';
-import ContactForm from '../components/ContactForm/ContactForm';
-import ContactList from '../components/ContactList/ContactList';
-import { contactsSelectors, contactsOperations } from '../redux/contacts';
-import Filter from '../components/Filter/Filter';
+import { useDispatch } from 'react-redux';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import ContactList from '../../components/ContactList/ContactList';
+import { contactsOperations } from '../../redux/contacts';
+import Filter from '../../components/Filter/Filter';
 export default function ContactsView() {
   const dispatch = useDispatch();
 

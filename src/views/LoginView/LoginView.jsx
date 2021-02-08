@@ -1,19 +1,16 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { authOperations } from '../redux/auth';
+import { authOperations } from '../../redux/auth';
 
-import styles from '../sass/styles.module.scss';
+import styles from './login.module.scss';
 
-export default function RegisterView() {
+export default function LoginView() {
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
-      case 'name':
-        return setName(value);
       case 'email':
         return setEmail(value);
       case 'password':
@@ -25,8 +22,7 @@ export default function RegisterView() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(authOperations.register({ name, email, password }));
-    setName('');
+    dispatch(authOperations.logIn({ email, password }));
     setEmail('');
     setPassword('');
   };
@@ -35,21 +31,9 @@ export default function RegisterView() {
     <div className={styles.form__container}>
       <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
         <header className={styles.head__form}>
-          <h2>Sigh Up Form</h2>
-          <p>Enter your personal data</p>
+          <h2>Log In</h2>
+          <p>login here using your username and password</p>
         </header>
-        <label className={styles.label}>
-          Username
-          <input
-            type="text"
-            name="name"
-            value={name}
-            autoComplete="off"
-            onChange={handleChange}
-            className={styles.input__item}
-          />
-        </label>
-
         <label className={styles.label}>
           Mail
           <input
@@ -74,7 +58,9 @@ export default function RegisterView() {
           />
         </label>
 
-        <button type="submit">Sign in</button>
+        <button className={styles.main_button} type="submit">
+          Login
+        </button>
       </form>
     </div>
   );

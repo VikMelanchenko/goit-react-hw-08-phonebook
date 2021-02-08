@@ -6,7 +6,7 @@ import { getContacts } from '../../redux/contacts/contacts-selectors';
 
 import { contactsOperations } from '../../redux/contacts';
 
-import styles from './styles.module.scss';
+import styles from './form.module.scss';
 
 export default function ContactsForms({ onSubmit }) {
   const [name, setName] = useState('');
@@ -38,18 +38,13 @@ export default function ContactsForms({ onSubmit }) {
       return toast.info('Please input name');
     }
 
-    dispatch(contactsOperations.addContact(name, number));
-    onSubmit(name, number);
-    checkUniqueContact();
-    onReset();
-  };
-
-  const checkUniqueContact = () => {
-    // check unique contact name
     if (contacts.find((contact) => contact.name === name)) {
       return toast.error(`${name} is already in contacts`);
     }
-    return;
+
+    dispatch(contactsOperations.addContact(name, number));
+    onSubmit(name, number);
+    onReset();
   };
 
   const onReset = () => {
@@ -58,11 +53,11 @@ export default function ContactsForms({ onSubmit }) {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.Container}>
       <h1>Add contact to my list</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label>
-          Name
+          <b>Name</b>
           <input
             className={styles.input__item}
             type="text"
@@ -73,7 +68,7 @@ export default function ContactsForms({ onSubmit }) {
           ></input>
         </label>
         <label>
-          Pnone number
+          <b>Pnone number</b>
           <input
             className={styles.input__item}
             type="tel"

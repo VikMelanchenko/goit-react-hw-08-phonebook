@@ -1,0 +1,59 @@
+@import '../../sass/utilities/container';
+@import '../../sass/utilities//mixins';
+@import '../../sass/utilities/vars';
+@import '../../sass/utilities/placeholder';
+
+.contact_list_container {
+  @include centeredFlex();
+
+  h1 {
+    @extend %h1;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ul {
+    margin: auto;
+  }
+
+  .contact__item__ {
+    width: 280px;
+    font-weight: $font-medium;
+    font-size: $size-normal;
+    color: $h1-color;
+    letter-spacing: $letter-spacing-normal;
+
+    margin-right: 5px;
+
+    color: $input-color;
+  }
+
+  .contact__item {
+    @include centeredFlex();
+    margin-right: 25px;
+  }
+
+  .contact__button {
+    display: block;
+    color: #252537;
+
+    width: 100px;
+    height: 45px;
+    padding: $padding-form-input;
+
+    background: $primary-white-color;
+    border-radius: $border-form-input;
+    cursor: pointer;
+
+    @extend %styles;
+
+    letter-spacing: $letter-spacing-normal;
+    margin: 7% auto;
+
+    &:hover {
+      @extend %hover;
+    }
+  }
+}

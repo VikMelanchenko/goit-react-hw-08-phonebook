@@ -1,0 +1,65 @@
+@import '../../sass/utilities/container';
+@import '../../sass/utilities/vars';
+@import '../../sass/utilities/mixins';
+@import '../../sass/utilities/placeholder';
+@import '../../sass/utilities/body';
+
+.header {
+  @include centeredFlex();
+
+  border-bottom: 1px solid $primery-link-color;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: $primery-link-color;
+}
+
+.activeLink {
+  color: $sctive-link-color;
+}
+
+.container {
+  @include centeredFlex();
+
+  align-items: center;
+
+  span {
+    margin-right: 20px;
+  }
+
+  &avatar {
+    margin-right: 4;
+  }
+
+  &name {
+    font-weight: 700;
+    margin-right: 12;
+    color: $h1-color;
+  }
+
+  .menu_button {
+    display: block;
+    color: #252537;
+
+    width: 100px;
+    height: 45px;
+    padding: $padding-form-input;
+
+    background: $primary-white-color;
+    border-radius: $border-form-input;
+    cursor: pointer;
+
+    @extend %styles;
+
+    letter-spacing: $letter-spacing-normal;
+    margin: 5% auto;
+
+    &:hover {
+      @extend %hover;
+    }
+  }
+}

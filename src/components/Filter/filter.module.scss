@@ -1,0 +1,31 @@
+@import '../../sass/utilities/container';
+@import '../../sass/utilities/mixins';
+@import '../../sass/utilities/vars';
+@import '../../sass/utilities/placeholder';
+
+.filter_input {
+  @include centeredFlex();
+
+  text-align: center;
+
+  label {
+    font-size: 15px;
+    color: $h1-color;
+  }
+
+  h1 {
+    font-size: 20px;
+    color: $h1-color;
+    text-align: center;
+  }
+
+  .input__item {
+    width: 500px;
+
+    background: $primary-white-color;
+    color: $input-color;
+    padding: $padding-form-input;
+    border-radius: $border-form-input;
+    @extend %styles;
+  }
+}

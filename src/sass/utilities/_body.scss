@@ -1,0 +1,8 @@
+@import '../utilities/vars';
+
+body {
+  font-family: $font-family;
+  color: $primary-text-color;
+
+  background-image: $background;
+}

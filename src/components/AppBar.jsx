@@ -4,7 +4,7 @@ import UserMenu from './UserMenu/UserMenu';
 import AuthNav from './AuthNav';
 import { authSelectors } from '../redux/auth';
 
-import styles from '../sass/styles.module.scss';
+import styles from './UserMenu/menu.module.scss';
 
 function AppBar() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);

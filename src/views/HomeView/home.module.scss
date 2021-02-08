@@ -1,0 +1,16 @@
+@import '../../sass//utilities/vars';
+@import '../../sass/utilities/mixins';
+@import '../../sass/utilities/body';
+
+.home__container {
+  min-height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .home__title {
+    $font-medium: 500;
+    font-size: 48px;
+    text-align: center;
+  }
+}
